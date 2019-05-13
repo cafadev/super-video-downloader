@@ -1,0 +1,207 @@
+$big-o: 25rem
+$medium-o: 18rem
+$small-o: 10rem
+
+$primary-color: #1e88e5
+$warning-color: yellow
+$danger-color: #ff1744
+
+*
+    margin: 0
+    box-sizing: border-box
+    font-family: "Roboto"
+
+body
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    position: relative
+    width: 100%
+
+    &::before
+        background-color: $primary-color
+        border-radius: 50%
+        content: ""
+        display: block
+        margin: (-30vh) auto 0 auto
+        height: $big-o
+        width: $big-o
+        position: absolute
+        z-index: -1
+
+a
+    text-decoration: none
+
+input
+    background: #ffffff
+    border: 0
+    border-radius: 5px
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35)
+    font-size: 15pt
+    padding: 0.8rem
+    width: 100%
+
+.bubble
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    align-content: center
+    border-radius: 50%
+    position: absolute
+    z-index: -1
+    *
+        color: rgba(0, 0, 0, 0.50)
+        text-align: center
+        width: 100%
+
+.bubble-left
+    @extend .bubble
+    background-color: $warning-color
+    height: $medium-o
+    left: -3rem
+    top: 25vh
+    width: $medium-o
+
+.bubble-right
+    @extend .bubble
+    background-color: $danger-color
+    height: $small-o
+    right: 3rem
+    top: 60vh
+    width: $small-o
+
+.container
+    max-width: 600px
+    padding: 1rem
+    width: 100%
+
+.section-title
+    color: rgba(0, 0, 0, 0.50)
+    margin-top: 3rem
+
+.display-none
+    display: none
+
+.display-flex
+    display: flex
+
+.display-block
+    display: block
+
+.downloaded-up
+    color: $primary-color
+
+.downloaded-down
+    color: $danger-color
+
+.display-1
+    color: #ffffff
+    font-weight: 300
+    text-align: center
+    font-size: 24pt
+    margin-top: 3rem
+    margin-bottom: 3rem
+    width: 100%
+
+.center-content
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    width: 100%
+
+.tracked-video
+    flex-flow: row nowrap
+    margin-top: 3rem
+    margin-bottom: 5rem
+    width: 100%
+    .tracked-video__image-wrapper
+        display: flex
+        flex-flow: row nowrap
+        justify-content: center
+        align-items: flex-start
+        margin: 0
+        overflow: hidden
+        height: 128px
+        width: 200px
+        .tracked-video__image
+            width: 100%
+
+    .tracked-video__content
+        padding: 0 0.5rem
+        width: 100%
+        .tracked-video__content__title
+            font-weight: 300
+
+    .tracked-video--content__download-options
+        color: $primary-color
+        display: flex
+        flex-flow: row nowrap
+        font-size: 11pt
+        justify-content: space-between
+        margin-top: 1.5rem
+        span
+            cursor: pointer
+
+.recent-downloads
+    margin-top: 1rem
+    width: 100%
+    .downloaded
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+        margin-top: 2rem
+        width: 100%
+        &::after
+            background-color: rgba(0, 0, 0, 0.25)
+            content: ""
+            display: block
+            height: 1px
+            margin-top: 1rem
+            width: 100%
+
+@media screen and (max-width: 900px)
+    .bubble-left
+        display: none
+
+.spinner
+    width: 40px
+    height: 40px
+
+    position: relative
+    margin: 100px auto
+
+
+.double-bounce1, .double-bounce2 
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    background-color: $primary-color
+    opacity: 0.6
+    position: absolute
+    top: 0
+    left: 0
+
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out
+    animation: sk-bounce 2.0s infinite ease-in-out
+
+
+.double-bounce2 
+    -webkit-animation-delay: -1.0s
+    animation-delay: -1.0s
+
+
+@-webkit-keyframes sk-bounce
+    0%, 100%
+        -webkit-transform: scale(0.0) 
+    50%
+        -webkit-transform: scale(1.0) 
+
+
+@keyframes sk-bounce 
+    0%, 100%  
+        transform: scale(0.0)
+        -webkit-transform: scale(0.0)
+    50%  
+        transform: scale(1.0)
+        -webkit-transform: scale(1.0)
+  

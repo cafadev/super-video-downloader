@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Super Video Downloader</title>
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400" rel="stylesheet">
+    
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <main class="container">
+        <h1 class="display-1 white-text">Super Video Downloader</h1>
+        <form class="center-content">
+            <input id="input-url" type="text" placeholder="Paste video URL">
+        </form>
+
+        <div id="spinner" class="animated fadeIn spinner display-none">
+          <div class="double-bounce1"></div>
+          <div class="double-bounce2"></div>
+        </div>
+
+        <section id="tracked-video" class="animated fadeIn tracked-video display-none">
+            <figure class="tracked-video__image-wrapper">
+                <img id="thumbnail" class="tracked-video__image" src="" alt="">
+            </figure>
+            <div class="tracked-video__content">
+                <h3 id="title" class="tracked-video__content__title"></h3>
+                <div id="download-options" class="tracked-video--content__download-options">
+                </div>
+            </div>
+        </section>
+
+        <h4 class="section-title">Recent downloads</h4>
+        <section id="ranking" class="animated fadeInUp recent-downloads">
+        </section>
+    </main>
+
+    <div class="bubble bubble-left">
+        <i class="material-icons">trending_up</i>
+        <h2>10k</h2>
+        <p>Monthly downloads</p>
+    </div>
+    <div class="bubble bubble-right"></div>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <script src="js/controller.js"></script>
+
+</body>
+</html>
